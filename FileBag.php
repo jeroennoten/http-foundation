@@ -77,6 +77,7 @@ class FileBag extends ParameterBag
 
         if (\is_array($file)) {
             $file = $this->fixPhpFilesArray($file);
+            unset($file['full_path']);
             $keys = array_keys($file);
             sort($keys);
 
